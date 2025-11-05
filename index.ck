@@ -22,14 +22,12 @@ fun void playChord(float root, float third, float fifth, dur length){
     // 0=>s2.noteOff;
     // 0=>s3.noteOff;
     
-    // fade in
     0 => g1.gain => g2.gain => g3.gain;
     0.3 => g1.gain => g2.gain => g3.gain;
 
-    // hold the chord
-    length - (100::ms) => now;
 
-    // fade out quickly
+    // length - (100::ms) => now;
+
     0 => g1.gain => g2.gain => g3.gain;
 
     100::ms => now;
